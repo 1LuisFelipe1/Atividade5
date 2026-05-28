@@ -1,28 +1,33 @@
 <?php
 
-final class cliente {
-    public function __construct(
-        private String $nome,
-        private String $email,) {}
+declare(strict_types=1);
 
-    public function setNome($novoNome) : void {
-        $nome = $novoNome;
+class Cliente {
+
+    private string $nome;
+    private string $email;
+
+    public function __construct(string $nome, string $email) {
+        $this->nome = $nome;
+        $this->email = $email;
     }
 
-    public function getNome() : String {
-        return $nome;
+    public function setNome($novonome): void {
+        $this->nome = $novonome;
     }
 
-    public function setEmail($novoEmail) : void {
-        $email = $novoEmail;
+    public function getNome(): string {
+        return $this->nome;
     }
 
-    public function getEmail() : String {
-        return $email;
+    public function setEmail($novoemail): void {
+        $this->email = $novoemail;
     }
 
+    public function getEmail(): string {
+        return $this->email;
+    }
 
 }
-
 
 ?>
